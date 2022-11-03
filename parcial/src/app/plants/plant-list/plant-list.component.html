@@ -1,3 +1,33 @@
-<p>
-  plant-list works!
-</p>
+<div class="container-fluid">
+  <div class="col-md-6">
+    <img src="/assets/imgvivero.png" alt="Vivero">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">#</th>
+          <th class="h4">Nombre común</th>
+          <th class="h4">Tipo</th>
+          <th class="h4">Clima</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of plants">
+          <td>
+            <dd>{{p.id}}</dd>
+          </td>
+          <td>
+            <dd>{{p.nombre_comun}}</dd>
+          </td>
+          <td>
+            <dd>{{p.tipo}}</dd>
+          </td>
+          <td>
+            <dd>{{p.nombre_cientifico}}</dd>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <button class="btn btn-danger">Test </button>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Plant } from './plant';
+import { PlantsService } from './plants.service';
 
 @Component({
   selector: 'app-plants',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlantsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit() {
   }
