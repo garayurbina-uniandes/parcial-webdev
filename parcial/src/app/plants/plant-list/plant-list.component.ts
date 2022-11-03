@@ -12,14 +12,23 @@ export class PlantListComponent implements OnInit {
   constructor(private plantService: PlantsService) { }
 
   plants: Plant[] = [];
+  plantas_interior: number = 0;
+  plantas_exterior: number = 0;
 
   getPlants(){
-    this.plantService.getPlants().subscribe(plants =>
-      this.plants = plants)
+    this.plantService.getPlants().subscribe(plants => {
+      this.plants = plants;
+      this.contarPlantasTipo();
+    });
   }
 
   ngOnInit() {
     this.getPlants();
+  }
+
+  contarPlantasTipo(){
+    this.plantas_interior = this.plants.filter(plant => plant.tipo === "Interior").length
+    this.plantas_exterior = this.plants.filter(plant => plant.tipo === "Exterior").length
   }
 
 }

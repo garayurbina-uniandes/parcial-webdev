@@ -3,11 +3,11 @@
     <img src="/assets/imgvivero.png" alt="Vivero">
     <table class="table">
       <thead>
-        <tr>
-          <th class="h4">#</th>
-          <th class="h4">Nombre común</th>
-          <th class="h4">Tipo</th>
-          <th class="h4">Clima</th>
+        <tr class="table-dark">
+          <th >#</th>
+          <th >Nombre común</th>
+          <th >Tipo</th>
+          <th >Clima</th>
         </tr>
       </thead>
       <tbody>
@@ -22,12 +22,14 @@
             <dd>{{p.tipo}}</dd>
           </td>
           <td>
-            <dd>{{p.nombre_cientifico}}</dd>
+            <dd>{{p.clima}}</dd>
           </td>
       </tr>
       </tbody>
     </table>
 
-    <button class="btn btn-danger">Test </button>
+    <p>Total plantas de interior: {{plantas_interior}}</p>
+    <p>Total plantas de exterior: {{plantas_exterior}}</p>
+
   </div>
 </div>
